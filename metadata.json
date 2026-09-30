@@ -1,0 +1,8 @@
+{
+  "name": "Remix QFlow AI · 测试全流程管控平台",
+  "description": "面向复杂系统的AI智能测试全流程管控平台，集成项目知识资产、3D业务关系图谱、研发变更影响分析与智能测试用例设计。",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

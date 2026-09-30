@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Universal Typography & Contrast Reset */
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   LIGHT MODE: Guaranteed Deep Black Typography & Pristine Readability
+   ========================================================================== */
+
+/* Universal light mode text color reset */
+#qflow-app-container:not(.dark) {
+  color: #020617;
+  background-color: #f8fafc;
+}
+
+/* Headings in Light Mode */
+#qflow-app-container:not(.dark) h1,
+#qflow-app-container:not(.dark) h2,
+#qflow-app-container:not(.dark) h3,
+#qflow-app-container:not(.dark) h4,
+#qflow-app-container:not(.dark) h5,
+#qflow-app-container:not(.dark) h6 {
+  color: #020617 !important;
+  font-weight: 700;
+}
+
+/* Paragraphs, descriptions, labels & standard text in Light Mode */
+#qflow-app-container:not(.dark) p,
+#qflow-app-container:not(.dark) label,
+#qflow-app-container:not(.dark) li,
+#qflow-app-container:not(.dark) dt,
+#qflow-app-container:not(.dark) dd,
+#qflow-app-container:not(.dark) td,
+#qflow-app-container:not(.dark) th {
+  color: #090d16 !important;
+}
+
+/* Override all light-gray/slate utility classes in Light Mode to deep black */
+#qflow-app-container:not(.dark) .text-slate-300,
+#qflow-app-container:not(.dark) .text-slate-400,
+#qflow-app-container:not(.dark) .text-slate-500,
+#qflow-app-container:not(.dark) .text-slate-600,
+#qflow-app-container:not(.dark) .text-slate-700,
+#qflow-app-container:not(.dark) .text-slate-800,
+#qflow-app-container:not(.dark) .text-slate-900,
+#qflow-app-container:not(.dark) .text-slate-950,
+#qflow-app-container:not(.dark) .text-gray-300,
+#qflow-app-container:not(.dark) .text-gray-400,
+#qflow-app-container:not(.dark) .text-gray-500,
+#qflow-app-container:not(.dark) .text-gray-600,
+#qflow-app-container:not(.dark) .text-gray-700,
+#qflow-app-container:not(.dark) .text-zinc-400,
+#qflow-app-container:not(.dark) .text-zinc-500,
+#qflow-app-container:not(.dark) .text-neutral-400,
+#qflow-app-container:not(.dark) .text-neutral-500 {
+  color: #090d16 !important;
+}
+
+/* Semantic colored badges in Light Mode - ensure high-contrast deep shades */
+#qflow-app-container:not(.dark) .text-emerald-400,
+#qflow-app-container:not(.dark) .text-emerald-500,
+#qflow-app-container:not(.dark) .text-emerald-600,
+#qflow-app-container:not(.dark) .text-emerald-700,
+#qflow-app-container:not(.dark) .text-emerald-800 {
+  color: #064e3b !important; /* emerald-900 for ultra-high contrast */
+}
+
+#qflow-app-container:not(.dark) .text-indigo-400,
+#qflow-app-container:not(.dark) .text-indigo-500,
+#qflow-app-container:not(.dark) .text-indigo-600,
+#qflow-app-container:not(.dark) .text-indigo-700,
+#qflow-app-container:not(.dark) .text-indigo-800 {
+  color: #312e81 !important; /* indigo-900 */
+}
+
+#qflow-app-container:not(.dark) .text-cyan-400,
+#qflow-app-container:not(.dark) .text-cyan-500,
+#qflow-app-container:not(.dark) .text-cyan-600,
+#qflow-app-container:not(.dark) .text-cyan-700,
+#qflow-app-container:not(.dark) .text-cyan-800 {
+  color: #164e63 !important; /* cyan-900 */
+}
+
+#qflow-app-container:not(.dark) .text-amber-400,
+#qflow-app-container:not(.dark) .text-amber-500,
+#qflow-app-container:not(.dark) .text-amber-600,
+#qflow-app-container:not(.dark) .text-amber-700,
+#qflow-app-container:not(.dark) .text-amber-800 {
+  color: #78350f !important; /* amber-900 */
+}
+
+#qflow-app-container:not(.dark) .text-red-400,
+#qflow-app-container:not(.dark) .text-red-500,
+#qflow-app-container:not(.dark) .text-red-600,
+#qflow-app-container:not(.dark) .text-red-700,
+#qflow-app-container:not(.dark) .text-red-800 {
+  color: #7f1d1d !important; /* red-900 */
+}
+
+#qflow-app-container:not(.dark) .text-blue-400,
+#qflow-app-container:not(.dark) .text-blue-500,
+#qflow-app-container:not(.dark) .text-blue-600,
+#qflow-app-container:not(.dark) .text-blue-700,
+#qflow-app-container:not(.dark) .text-blue-800 {
+  color: #1e3a8a !important; /* blue-900 */
+}
+
+#qflow-app-container:not(.dark) .text-purple-400,
+#qflow-app-container:not(.dark) .text-purple-500,
+#qflow-app-container:not(.dark) .text-purple-600,
+#qflow-app-container:not(.dark) .text-purple-700,
+#qflow-app-container:not(.dark) .text-purple-800 {
+  color: #581c87 !important; /* purple-900 */
+}
+
+/* Preserve crisp white on solid-filled buttons and dark chips */
+#qflow-app-container:not(.dark) button.bg-indigo-600,
+#qflow-app-container:not(.dark) button.bg-indigo-700,
+#qflow-app-container:not(.dark) button.bg-emerald-600,
+#qflow-app-container:not(.dark) button.bg-emerald-700,
+#qflow-app-container:not(.dark) button.bg-slate-900,
+#qflow-app-container:not(.dark) button.bg-slate-950,
+#qflow-app-container:not(.dark) button.bg-red-600,
+#qflow-app-container:not(.dark) button[type="submit"].bg-indigo-600,
+#qflow-app-container:not(.dark) .bg-indigo-600 > *,
+#qflow-app-container:not(.dark) .bg-indigo-700 > *,
+#qflow-app-container:not(.dark) .bg-emerald-600 > *,
+#qflow-app-container:not(.dark) .bg-emerald-700 > *,
+#qflow-app-container:not(.dark) [class*="bg-gradient-to-r from-teal"] *,
+#qflow-app-container:not(.dark) [class*="bg-gradient-to-r from-amber"] *,
+#qflow-app-container:not(.dark) [class*="bg-gradient-to-r from-indigo"] * {
+  color: #ffffff !important;
+}
+
+/* Inputs, textareas and placeholders */
+#qflow-app-container:not(.dark) input,
+#qflow-app-container:not(.dark) textarea,
+#qflow-app-container:not(.dark) select {
+  color: #020617 !important;
+}
+
+#qflow-app-container:not(.dark) input::placeholder,
+#qflow-app-container:not(.dark) textarea::placeholder {
+  color: #475569 !important; /* slate-600 for clear readability */
+  opacity: 1;
+}
+
+/* Custom subtle scrollbar styling */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.7);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
